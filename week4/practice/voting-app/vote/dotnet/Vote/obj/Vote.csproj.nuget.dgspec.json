@@ -1,0 +1,76 @@
+{
+  "format": 1,
+  "restore": {
+    "c:\\Users\\Kristoffer Krueger\\development\\bryanUniversity\\afs-205\\week4\\practice\\voting-app\\vote\\dotnet\\Vote\\Vote.csproj": {}
+  },
+  "projects": {
+    "c:\\Users\\Kristoffer Krueger\\development\\bryanUniversity\\afs-205\\week4\\practice\\voting-app\\vote\\dotnet\\Vote\\Vote.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "c:\\Users\\Kristoffer Krueger\\development\\bryanUniversity\\afs-205\\week4\\practice\\voting-app\\vote\\dotnet\\Vote\\Vote.csproj",
+        "projectName": "Vote",
+        "projectPath": "c:\\Users\\Kristoffer Krueger\\development\\bryanUniversity\\afs-205\\week4\\practice\\voting-app\\vote\\dotnet\\Vote\\Vote.csproj",
+        "packagesPath": "C:\\Users\\Kristoffer Krueger\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\Kristoffer Krueger\\development\\bryanUniversity\\afs-205\\week4\\practice\\voting-app\\vote\\dotnet\\Vote\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Kristoffer Krueger\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "targetAlias": "netcoreapp2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "targetAlias": "netcoreapp2.1",
+          "dependencies": {
+            "Microsoft.AspNetCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.1, )",
+              "autoReferenced": true
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            },
+            "NATS.Client": {
+              "target": "Package",
+              "version": "[0.8.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
