@@ -1,0 +1,31 @@
+*{
+    background-color: aqua;
+    text-align: center;
+}
+
+* {
+    margin: 2px;
+    background-color: cornflowerblue;
+    text-align: center;
+}
+h1 {
+    margin: 2rem;
+    padding: 2rem;
+    text-align: center;
+    font-size: 4rem;
+    color: crimson;
+}
+nav {
+    background-color: lightgray;
+    display: flex;
+    justify-content: space-evenly;
+}
+nav a {
+    background-color: lightgray;
+    margin: 2px;
+    text-decoration: none;
+}
+p {
+    margin: 4rem;
+    font-size: 2rem;
+}

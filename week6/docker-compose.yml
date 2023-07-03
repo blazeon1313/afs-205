@@ -1,0 +1,63 @@
+version: "3"
+services:
+  www:
+    image: httpd
+    restart: always
+    ports:
+      - 80:80
+    volumes:
+      - "./htdocs/:/usr/local/apache2/htdocs"
+      - "./conf/:/usr/local/apache2/conf"
+      - "./css:/usr/local/apache2/htdocs/styles"
+    depends_on: 
+      - db
+
+  db:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+      MYSQL_DATABASE: dockhub
+      MYSQL_USER: dochub
+      MYSQL_PASSWORD: docker1234
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: always
+
+  phpmyadmin:
+    image: phpmyadmin
+    ports:
+      - 8080:80
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+    depends_on:
+      - db
+    restart: always
+
+  matomo:
+    image: matomo:latest
+    restart: always
+    volumes:
+#     - ./config:/var/www/html/config:z
+#     - ./logs:/var/www/html/logs:z
+      - matomo:/var/www/html:z
+    environment:
+      MATOMO_DATABASE_HOST: db
+      MYSQL_PASSWORD: matomo123
+      MYSQL_DATABASE: matomo
+      MYSQL_USER: matomo
+      MATOMO_DATABASE_ADAPTER: mysql
+      MATOMO_DATABASE_TABLES_PREFIX: matomo_
+      MATOMO_DATABASE_USERNAME: matomo
+      MATOMO_DATABASE_PASSWORD:
+      MATOMO_DATABASE_DBNAME: matomo
+      MARIADB_AUTO_UPGRADE: 1
+      MARIADB_INITDB_SKIP_TZINFO: 1
+    ports:
+      - 8888:80
+    depends_on: 
+      - db
+
+volumes:
+  db_data:
+  matomo:
