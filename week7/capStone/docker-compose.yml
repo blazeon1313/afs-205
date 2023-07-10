@@ -1,0 +1,10 @@
+version: "3"
+services:
+  www:
+    image: httpd
+    restart: always
+    ports:
+      - 80:80
+    volumes:
+      - "./htdocs/:/usr/local/apache2/htdocs"
+      - "./conf/:/usr/local/apache2/conf"
